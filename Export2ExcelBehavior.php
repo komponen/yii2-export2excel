@@ -16,7 +16,7 @@ use \PHPExcel_Style_Fill;
 use \PHPExcel_Writer_IWriter;
 use \PHPExcel_Worksheet;
 use \PHPExcel_Style;
-
+use \PHPExcel_Style_Border;
 // you can manual add below line to your vendor/composer/autoload_psr4.php if not install this widget from composer
 //'scotthuangzl\\export2excel\\' => array($vendorDir . '/scotthuangzl/yii2-export2excel'),
 
@@ -108,12 +108,12 @@ class Export2ExcelBehavior extends Behavior
 
         $style_obj = new PHPExcel_Style();
         $style_array = array(
-//            'borders' => array(
-//                'top' => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-//                'left' => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-//                'bottom' => array('style' => PHPExcel_Style_Border::BORDER_THIN),
-//                'right' => array('style' => PHPExcel_Style_Border::BORDER_THIN)
-//            ),
+			'borders' => array(
+               'top' => array('style' => PHPExcel_Style_Border::BORDER_THICK),
+               'left' => array('style' => PHPExcel_Style_Border::BORDER_THICK),
+               'bottom' => array('style' => PHPExcel_Style_Border::BORDER_THICK),
+               'right' => array('style' => PHPExcel_Style_Border::BORDER_THICK)
+			),
             'alignment' => array(
                 'horizontal' => \PHPExcel_Style_Alignment::HORIZONTAL_CENTER,
                 'vertical' => \PHPExcel_Style_Alignment::VERTICAL_CENTER,
